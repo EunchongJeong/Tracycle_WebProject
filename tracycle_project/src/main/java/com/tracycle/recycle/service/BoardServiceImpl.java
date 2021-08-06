@@ -124,15 +124,62 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
+
+	public List<BoardVO> findByTitleLimitOffset(HashMap<String, String> map) {
+		return boardDao.findByTitleLimitOffset(map);
+	}
+
+	@Override
+	public int findByTitleTotalCount(String title) {
+		return boardDao.findByTitleTotalCount(title);
+	}
+
+	@Override
+	public List<BoardVO> findByIdLimitOffset(HashMap<String, String> map) {
+		return boardDao.findByIdLimitOffset(map);
+	}
+
+	@Override
+	public int findByIdTotalCount(String id) {
+		return boardDao.findByIdTotalCount(id);
+	}
+
+	@Override
+	public List<BoardVO> findByContentLimitOffset(HashMap<String, String> map) {
+		return boardDao.findByContentLimitOffset(map);
+	}
+
+	@Override
+	public int findByContentTotalCount(String content) {
+		return boardDao.findByContentTotalCount(content);
+	}
+
 	public List<BoardVO> getCategoryLimitOffset(HashMap<String, Integer> map) {
 		return boardDao.getCategoryLimitOffset(map);
 	}
 
+<<<<<<< HEAD
+=======
+	@Override
+	public int getCategoryTotalCount(int categoryId) throws Exception {
+		return boardDao.getCategoryTotalCount(categoryId);
+	}
+
+>>>>>>> upstream/main
 	@Override
 	public List<BoardVO> getAreaLimitOffset(HashMap<String, Integer> map) {
 		return boardDao.getAreaLimitOffset(map);
 	}
 
+<<<<<<< HEAD
+=======
+	@Override
+	public int getAreaTotalCount(int AreaId) throws Exception {
+		return boardDao.getAreaTotalCount(AreaId);
+	}
+
+
+>>>>>>> upstream/main
 	
 
 	

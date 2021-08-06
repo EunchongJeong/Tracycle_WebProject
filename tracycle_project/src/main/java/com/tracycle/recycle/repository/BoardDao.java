@@ -33,7 +33,16 @@ public interface BoardDao {
 	//pagination
 	public List<BoardVO> getBoardLimitOffset(int offset);
 	public int getBoardTotalCount();
+
+	public List<BoardVO> findByTitleLimitOffset(HashMap<String, String> map);
+	public int findByTitleTotalCount(String title);
+	public List<BoardVO> findByIdLimitOffset(HashMap<String, String> map);
+	public int findByIdTotalCount(String id);
+	public List<BoardVO> findByContentLimitOffset(HashMap<String, String> map);
+	public int findByContentTotalCount(String content);
+
 	//추가
 	public List<BoardVO> getCategoryLimitOffset(HashMap<String, Integer>map);
 	public List<BoardVO> getAreaLimitOffset(HashMap<String, Integer>map);
+
 }

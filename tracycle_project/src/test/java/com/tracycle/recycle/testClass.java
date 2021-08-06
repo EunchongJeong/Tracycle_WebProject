@@ -89,7 +89,7 @@ public class testClass {
 		//1. writeBoard Test..
 		
 //		BoardVO board = new BoardVO();
-
+//
 //		board.setTitle("여름아 부탁해!!");
 //		board.setContent("바다에 보내줘!!!.");
 //		board.setTitle("덥다 덥다고!!");
@@ -153,9 +153,13 @@ public class testClass {
 		
 		//6. findByContent Test
 		
-//		List<BoardVO> list = session.selectList("BoardMapper.findByContent", "가세요");
+//		List<BoardVO> list = session.selectList("BoardMapper.findByContentLimitOffset", );
 //		System.out.println(list);
-		
+		HashMap<String, String> map = new HashMap<String, String>(); 
+		map.put("content", "f");
+		map.put("offset", "3");
+        List<BoardVO> list = session.selectList("BoardMapper.findByContentLimitOffset", map);
+        System.out.println(list);
 
 		//7. findByArea Test
 		
@@ -198,11 +202,6 @@ public class testClass {
 //		System.out.println(list);
 		
 		
-		HashMap<String, Object> map  = new HashMap<String, Object>();
-		map.put("categoryId", 2);
-		map.put("offset", 0);
-		List<BoardVO> list = session.selectList("BoardMapper.getCategoryLimitOffset", map);
-		System.out.println(list);
 		
 //		HashMap<String, Integer> map  = new HashMap<String, Integer>();
 //		map.put("areaId", 1);
