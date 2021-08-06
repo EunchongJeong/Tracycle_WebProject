@@ -516,17 +516,6 @@ public class BoardController {
 		}
 	}
 	
-	@ApiOperation(value="카테고리로 검색된 게시글 수 출력 ", response=List.class)
-	@GetMapping("findByCategoryTotalCount/{categoryId}")
-	public  ResponseEntity<Integer> getCategoryTotalCount(@PathVariable int categoryId) throws Exception {
-		try {
-			int totalCount = boardService.getCategoryTotalCount(categoryId);
-			return new ResponseEntity<Integer>(totalCount, HttpStatus.OK);
-		}catch(RuntimeException e) {
-			e.printStackTrace();
-			return new ResponseEntity<Integer>(HttpStatus.NO_CONTENT);
-		}
-	}
 
 	@ApiOperation(value="limit offset 에 해당하는 카테고리 게시글을 출력한다", response=List.class)
 	@GetMapping("findByCategoryLimitOffset/{categoryId}/{offset}")
@@ -543,17 +532,6 @@ public class BoardController {
 		}
 	}
 	
-	@ApiOperation(value="지역으로 검색된 게시글 수 출력 ", response=List.class)
-	@GetMapping("findByAreaTotalCount/{areaId}")
-	public  ResponseEntity<Integer> getAreaTotalCount(@PathVariable int areaId) throws Exception {
-		try {
-			int totalCount = boardService.getAreaTotalCount(areaId);
-			return new ResponseEntity<Integer>(totalCount, HttpStatus.OK);
-		}catch(RuntimeException e) {
-			e.printStackTrace();
-			return new ResponseEntity<Integer>(HttpStatus.NO_CONTENT);
-		}
-	}
 	
 	@ApiOperation(value="limit offset 에 해당하는 지역 게시글을 출력한다", response=List.class)
 	@GetMapping("findByAreaLimitOffset/{areaId}/{offset}")
