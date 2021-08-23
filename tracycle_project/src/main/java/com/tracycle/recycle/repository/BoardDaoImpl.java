@@ -167,20 +167,13 @@ public class BoardDaoImpl implements BoardDao {
 		return sqlSession.selectList(ns + "getCategoryLimitOffset", map);
 	}
 
-	@Override
-	public int getCategoryTotalCount(int categoryId) throws Exception {
-		return sqlSession.selectOne(ns + "getCategoryTotalCount", categoryId);
-	}
 
 	@Override
 	public List<BoardVO> getAreaLimitOffset(HashMap<String, Integer> map) {
 		return sqlSession.selectList(ns + "getAreaLimitOffset", map);
 	}
 
-	@Override
-	public int getAreaTotalCount(int AreaId) throws Exception {
-		return sqlSession.selectOne(ns + "getAreaTotalCount", AreaId);
-	}
+
 
 
 	

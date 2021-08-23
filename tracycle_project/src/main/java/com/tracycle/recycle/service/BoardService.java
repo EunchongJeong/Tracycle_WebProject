@@ -43,8 +43,5 @@ public interface BoardService {
 
 	//추가
 	public List<BoardVO> getCategoryLimitOffset(HashMap<String, Integer>map);
-	public int getCategoryTotalCount(int categoryId)throws Exception;
 	public List<BoardVO> getAreaLimitOffset(HashMap<String, Integer>map);
-	public int getAreaTotalCount(int AreaId)throws Exception;
-
 }
